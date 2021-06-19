@@ -1,6 +1,6 @@
 # writeapaper
 
-[![writeapaper](https://github.com/dgerosa/writeapaper/actions/workflows/writeapaper.yml/badge.svg)](https://github.com/dgerosa/writeapaper/actions)
+[![compiled LaTex](https://github.com/dgerosa/writeapaper/actions/workflows/writeapaper.yml/badge.svg)](https://github.com/dgerosa/writeapaper/actions)
 
 
 This is a template repository to write scientific papers with latex. 
