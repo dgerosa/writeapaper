@@ -7,3 +7,7 @@ A github action compiles the paper at every commit. The latest version is made a
 [github.com/dgerosa/writeapaper/blob/build/draft.pdf](https://github.com/dgerosa/writeapaper/blob/build/draft.pdf)
 
 There are two variables in `.github/workflows/writeapaper.yml` that you might want to change, which set the directory (`DIR`) and the filename (`FILE`) for the tex file you want to compile.
+
+
+TODO: 
+- [ ] Add templates for several journals (those I care about)  
