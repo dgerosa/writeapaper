@@ -1,6 +1,6 @@
 # Github workflow to compile latex and deploy the pdf to an orphan branch.
 # The latest compiled pdf is at available at e.g.
-# https://github.com/dgerosa/reponame/blob/biuld/filename.pdf
+# https://github.com/dgerosa/reponame/blob/build/filename.pdf
 # Davide Gerosa (2021) https://github.com/dgerosa
 
 name: writeapaper
