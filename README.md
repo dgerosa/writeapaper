@@ -10,4 +10,5 @@ There are two variables in `.github/workflows/writeapaper.yml` that you might wa
 
 
 TODO: 
+- [x] Deploy pdf to fixed url
 - [ ] Add templates for several journals (those I care about)  
