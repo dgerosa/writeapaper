@@ -1,0 +1,133 @@
+\documentclass[fleqn,usenatbib]{mnras_tex_edited}
+
+\usepackage{amssymb,amsmath,verbatim,mathtools,needspace,enumitem,etoolbox,graphicx,physics,microtype,natbib,url,hyperref,mathrsfs,bm,ulem,lipsum}
+\usepackage{orcidlink}
+
+\newcommand{\ssim}{\mathchar"5218\relax\,}
+\newcommand{\ttimes}{\!\times\!\relax}
+\renewcommand{\emph}[1]{\textit{#1}}
+
+\newcommand{\approptoinn}[2]{\mathrel{\vcenter{
+  \offinterlineskip\halign{\hfil$##$\cr
+    #1\propto\cr\noalign{\kern2pt}#1\sim\cr\noalign{\kern-2pt}}}}}
+
+\newcommand{\appropto}{\mathpalette\approptoinn\relax}
+
+\newcommand{\dg}[1]{{\color{Orange}DG: #1 }}
+
+%Journal abbreviations
+\def\aj{{Astron.~J.}}
+\def\actaa{{Acta Astron.}}\def\araa{{Ann.~Rev.~Astron.~Astrophys.}}
+\def\apj{{Astrophys.~J.}}\def\apjl{{Astrophys.~J.~Lett.}}
+\def\apjs{{Astrophys.~J.~Supp.}}
+\def\ao{{Appl.~Opt.}}
+\def\apss{{Ap\&SS}}
+\def\aap{{Astron.~Astrophys.}}
+\def\aapr{{A\&A~Rev.}}
+\def\aaps{{A\&AS}}
+\def\azh{{AZh}}
+\def\baas{{BAAS}}
+\def\bac{{Bull. astr. Inst. Czechosl.}}
+\def\caa{{Chinese Astron. Astrophys.}}
+\def\cjaa{{Chinese J. Astron. Astrophys.}}
+\def\icarus{{Icarus}}
+\def\jcap{{J. Cosmology Astropart. Phys.}}
+\def\jrasc{{JRASC}}
+\def\memras{{MmRAS}}
+\def\mnras{{Mon.~Not.~R.~Astron.~Soc.}}             
+\def\na{{New A}}
+\def\nar{{New A Rev.}}
+\def\pra{{Phys.~Rev.~A}}
+\def\prb{{Phys.~Rev.~B}}
+\def\prc{{Phys.~Rev.~C}}
+\def\prd{{Phys.~Rev.~D}}
+\def\pre{{Phys.~Rev.~E}}
+\def\prx{{Phys.~Rev.~X}}
+\def\prl{{Phys.~Rev.~Lett.}}
+\def\pasa{{PASA}}
+\def\pasp{{PASP}}
+\def\pasj{{PASJ}}
+\def\rmxaa{{Rev. Mexicana Astron. Astrofis.}}
+\def\qjras{{QJRAS}}
+\def\skytel{{S\&T}}
+\def\solphys{{Sol.~Phys.}}
+\def\sovast{{Soviet~Ast.}}\def\ssr{{Space~Sci.~Rev.}}
+\def\zap{{ZAp}}
+\def\nat{{Nature}}
+\def\iaucirc{{IAU~Circ.}}
+\def\aplett{{Astrophys.~Lett.}}
+\def\apspr{{Astrophys.~Space~Phys.~Res.}}
+\def\bain{{Bull.~Astron.~Inst.~Netherlands}}
+\def\fcp{{Fund.~Cosmic~Phys.}}
+\def\gca{{Geochim.~Cosmochim.~Acta}}
+\def\grl{{Geophys.~Res.~Lett.}}
+\def\jcp{{J.~Chem.~Phys.}}
+\def\jgr{{J.~Geophys.~Res.}}
+\def\jqsrt{{J.~Quant.~Spec.~Radiat.~Transf.}}
+\def\memsai{{Mem.~Soc.~Astron.~Italiana}}
+\def\nphysa{{Nucl.~Phys.~A}}
+\def\physrep{{Phys.~Rep.}}
+\def\physscr{{Phys.~Scr}}
+\def\planss{{Planet.~Space~Sci.}}
+\def\procspie{{Proc.~SPIE}}
+\def\lrr{{Living Rev. Relativ.}}
+\def\cqg{{Classical~Quant.~Grav.}}
+\def\natastro{{Nat. Astron.}}
+
+
+\newcommand{\milan}{Dipartimento di Fisica ``G. Occhialini'', Universit\'a degli Studi di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}
+\newcommand{\infn}{INFN, Sezione di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}
+\newcommand{\bham}{School of Physics and Astronomy \&	 Institute for Gravitational Wave Astronomy, University of Birmingham,\vspace{-0.05cm}\\$\;$Birmingham, B15 2TT, UK}
+
+%%%%
+
+\title[Write a paper]{Write a paper}
+
+
+\author[Gerosa et al.]{Davide Gerosa$\,$\orcidlink{0000-0002-0933-3579}$^{1,2,3}$, and friends
+\medskip
+\\
+$^{1}$\milan\\
+$^{2}$\infn\\
+$^{3}$\bham\\
+}
+
+\pubyear{\the\year{}}
+
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+\begin{abstract}
+
+I'm an abstract. \lipsum[1]
+
+\end{abstract}
+
+% Keywords from  https://academic.oup.com/mnras/pages/General_Instructions
+\begin{keywords}
+black-hole mergers --- gravitational waves
+\end{keywords}
+
+
+\section{Introduction}
+
+I'm a section, \cite{2016PhRvL.116f1102A}. \lipsum[2-3]
+
+\section*{Acknowledgements}
+
+We thank people. \lipsum[4]
+
+
+
+\section*{Data Availability}
+The data underlying this article will be shared on reasonable request to the corresponding author.
+
+
+\bibliographystyle{mnras_tex_edited}
+\bibliography{draft} 
+
+
+\end{document}
+
