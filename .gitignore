@@ -1,3 +1,9 @@
+# pyenv
+*.python-version
+
+# Jupyterlab
+*.ipynb_checkpoints
+
 # https://github.com/github/gitignore/
 
 ## Core latex/pdflatex auxiliary files:
