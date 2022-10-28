@@ -1,8 +1,5 @@
 # writeapaper
 
-[![writeapaper](https://github.com/dgerosa/writeapaper/actions/workflows/writeapaper.yml/badge.svg)](https://github.com/dgerosa/writeapaper/actions)
-
-
 This is a template repository to write scientific papers with latex. 
 
 First pick your journal from the `template` directory and copy its content into `draft`.  A github action will compile the paper at every commit. The latest version is made available at this permanent URL
@@ -15,3 +12,4 @@ There are two variables in `.github/workflows/writeapaper.yml` that you might wa
 TODO: 
 - [x] Deploy pdf to fixed url
 - [ ] Add more templates for common journals (at least those I care about)  
+
