@@ -703,8 +703,8 @@ FUNCTION {format.page}
 % should be called "preprint".
 FUNCTION {format.journal.doi}
 { doi empty$
-    { journal "ArXiv e-prints" =
-        { "preprint" }
+    { journal "{}" =
+        { "" }
         { journal }
       if$
     }
