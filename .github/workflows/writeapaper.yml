@@ -54,4 +54,4 @@ jobs:
       - name: delete
         uses: geekyeggo/delete-artifact@v2
         with:
-          name: *.pdf
+          name: github_artifacts/*
