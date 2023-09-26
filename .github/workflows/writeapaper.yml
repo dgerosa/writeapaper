@@ -47,3 +47,11 @@ jobs:
           publish_dir: ./github_deploy
           publish_branch: build
           force_orphan: true
+  clean:
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: ${{ env.FILE }}.pdf
