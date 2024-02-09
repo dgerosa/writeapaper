@@ -1404,7 +1404,9 @@ FUNCTION {book}
   if$
   format.date "year" output.check
   date.block
+  format.doiBegin output
   format.btitle "title" output.check
+  format.doiEnd output
   format.edition output
   crossref missing$
     { format.bvolume output
@@ -1481,7 +1483,9 @@ FUNCTION {incollection}
   format.authors "author" output.check
   format.date "year" output.check
   date.block
+  format.doiBegin output
   format.title "title" output.check
+  format.doiEnd output
   crossref missing$
     { 
       %% format.in.ed.booktitle "booktitle" output.check
