@@ -1,0 +1,140 @@
+\documentclass{aa_edited}  
+
+\usepackage{graphicx,txfonts,booktabs,natbib,mathtools,microtype,amssymb,amsmath,xspace,siunitx,lipsum}
+\usepackage[usenames,dvipsnames]{color} 
+\usepackage[normalem]{ulem}
+\usepackage[caption=false]{subfig} 
+\usepackage{orcidlink}
+
+\def\aj{{Astron.~J.}}
+\def\actaa{{Acta Astron.}}\def\araa{{Ann.~Rev.~Astron.~Astrophys.}}
+\def\apj{{Astrophys.~J.}}\def\apjl{{Astrophys.~J.~Lett.}}
+\def\apjs{{Astrophys.~J.~Supp.}}
+\def\ao{{Appl.~Opt.}}
+\def\apss{{Astrophys. Space Sci.}}
+\def\aap{{Astron.~Astrophys.}}
+\def\aapr{{A\&A~Rev.}}
+\def\aaps{{A\&AS}}
+\def\azh{{Astron. Rep.}}
+\def\baas{{Bull. Am. Astron. Soc.}}
+\def\bac{{Bull. astr. Inst. Czechosl.}}
+\def\caa{{Chinese Astron. Astrophys.}}
+\def\cjaa{{Chinese J. Astron. Astrophys.}}
+\def\icarus{{Icarus}}
+\def\jcap{{J. Cosmology Astropart. Phys.}}
+\def\jrasc{{J. R. Astron. Soc. Can.}}
+\def\memras{{Mem. R. Astron. Soc.}}
+\def\mnras{{Mon.~Not.~R.~Astron.~Soc.}}             
+\def\na{{New A}}
+\def\nar{{New A Rev.}}
+\def\pra{{Phys.~Rev.~A}}
+\def\prb{{Phys.~Rev.~B}}
+\def\prc{{Phys.~Rev.~C}}
+\def\prd{{Phys.~Rev.~D}}
+\def\pre{{Phys.~Rev.~E}}
+\def\prx{{Phys.~Rev.~X}}
+\def\prr{{Phys.~Rev.~Res.}}
+\def\prl{{Phys.~Rev.~Lett.}}
+\def\pasa{{Publ. Astron. Soc. Aust.}}
+\def\pasp{{Publ. Astron. Soc. Pac.}}
+\def\pasj{{	Publ. Astron. Soc. Jpn.}}
+\def\rmxaa{{Rev. Mexicana Astron. Astrofis.}}
+\def\qjras{{Quart. J. Roy. Astron. Soc.}}
+\def\skytel{{Sky & Telescope}}
+\def\solphys{{Sol.~Phys.}}
+\def\sovast{{Soviet~Ast.}}
+\def\ssr{{Space~Sci.~Rev.}}
+\def\zap{{Z. Astrophys.}}
+\def\nat{{Nature}}
+\def\iaucirc{{IAU~Circ.}}
+\def\aplett{{Astrophys.~Lett.}}
+\def\apspr{{Astrophys.~Space~Phys.~Res.}}
+\def\bain{{Bull.~Astron.~Inst.~Netherlands}}
+\def\fcp{{Fund.~Cosmic~Phys.}}
+\def\gca{{Geochim.~Cosmochim.~Acta}}
+\def\grl{{Geophys.~Res.~Lett.}}
+\def\jcp{{J.~Chem.~Phys.}}
+\def\jgr{{J.~Geophys.~Res.}}
+\def\jqsrt{{J.~Quant.~Spec.~Radiat.~Transf.}}
+\def\memsai{{Mem.~Soc.~Astron.~Italiana}}
+\def\nphysa{{Nucl.~Phys.~A}}
+\def\physrep{{Phys.~Rep.}}
+\def\physscr{{Phys.~Scr}}
+\def\planss{{Planet.~Space~Sci.}}
+\def\procspie{{Proc.~SPIE}}
+\def\lrr{{Living Rev. Relativ.}}
+\def\cqg{{Class. Quantum Gravity}}
+\def\natastro{{Nat. Astron.}}
+\def\rnaas{{Res. Notes AAS}}
+\newcommand{\lsim}{\mathrel{\rlap{\lower 3pt \hbox{$\sim$}} \raise 2.0pt \hbox{$<$}}}
+\newcommand{\gsim}{\mathrel{\rlap{\lower 3pt \hbox{$\sim$}} \raise 2.0pt \hbox{$>$}}}
+\definecolor{linkcolor}{rgb}{0.0,0.3,0.5}
+
+ \hypersetup{
+     colorlinks=true,
+     linkcolor=linkcolor,
+     filecolor=linkcolor,
+     citecolor = linkcolor,      
+     urlcolor=linkcolor,
+     }
+
+\interfootnotelinepenalty=10000
+\newcommand{\ssim}{\mathchar"5218\relax\,}
+\newcommand{\ttimes}{\!\times\!\relax}
+
+\newcommand{\dg}[1]{{\color{Orange}DG: #1 }}
+
+\newcommand{\milan}{Dipartimento di Fisica ``G. Occhialini'', Universit\'a degli Studi di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}
+\newcommand{\infn}{INFN, Sezione di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}
+\newcommand{\bham}{School of Physics and Astronomy \& Institute for Gravitational Wave Astronomy, University of Birmingham,\vspace{-0.05cm}\\$\;$Birmingham, B15 2TT, UK}
+
+\begin{document} 
+
+\title{Write a paper}
+\titlerunning{Write a paper}
+
+\author{
+Davide Gerosa$\,$\orcidlink{0000-0002-0933-3579}\inst{1,2,3}        
+\and friends
+}
+
+
+\authorrunning{Gerosa et al.}
+
+\institute{\milan \and \infn \and \bham
+\\[3pt] \href{mailto:davide.gerosa@unimib.it}{davide.gerosa@unimib.it}    
+}
+
+\abstract{
+
+I'm an abstract. \lipsum[1]
+
+}
+\keywords{black-hole mergers --- gravitational waves}
+
+\maketitle
+
+
+\section{Introduction}
+
+
+I'm a section, \cite{2016PhRvL.116f1102A}. \lipsum[2-3]
+
+   
+   
+   
+\begin{acknowledgements}
+
+We thank people. \lipsum[4]
+
+\end{acknowledgements}
+
+\bibliographystyle{aa_edited}
+\bibliography{draft}
+
+
+
+
+\end{document}
+
+
