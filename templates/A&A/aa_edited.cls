@@ -715,7 +715,8 @@
 \pagestyle{otherpage}
 \newcommand*\aa@headings{}
 \renewcommand*\date[1]{\renewcommand*\aa@date{#1}}%
-\newcommand*\aa@date{\today}
+% \newcommand*\aa@date{\today}
+\newcommand*\aa@date{}
 \renewcommand*\title[1]{\renewcommand*\aa@title{#1}}%
 \newcommand*\aa@title{}
 \newcommand*\subtitle[1]{\renewcommand*\aa@subtitle{#1}}
