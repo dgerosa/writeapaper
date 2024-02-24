@@ -7,7 +7,7 @@ A github action will compile the paper at every commit. The latest version is ma
 > [github.com/dgerosa/writeapaper/blob/build/draft.pdf](https://github.com/dgerosa/writeapaper/blob/build/draft.pdf)
 
 
-### Instructions: 
+#### Instructions: 
 
 - Remove the placeholders in the `draft` directory.
 - Pick your journal from the `template` directory and copy its content into `draft`.
