@@ -23,9 +23,10 @@ jobs:
       #  run: pdflatex ${{ env.FILE }}; bibtex ${{ env.FILE }}; pdflatex ${{ env.FILE }}; pdflatex ${{ env.FILE }};
       - name: LaTeX
         uses: xu-cheng/texlive-action@v2
-        working-directory: ${{ env.DIR }}
+        #working-directory: ${{ env.DIR }}
         with:
           run: |
+              cd ${{ env.DIR }}
               pdflatex ${{ env.FILE }}
               bibtex ${{ env.FILE }}
               pdflatex ${{ env.FILE }}
