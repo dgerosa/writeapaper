@@ -1,5 +1,5 @@
 # Github workflow to compile latex and deploy the pdf to an orphan branch.
-# The latest compiled pdf is at available at e.g.
+# The latest compiled pdf is made available at e.g.
 # https://github.com/dgerosa/reponame/blob/build/filename.pdf
 # Davide Gerosa (2021) https://github.com/dgerosa
 
@@ -23,7 +23,6 @@ jobs:
       #  run: pdflatex ${{ env.FILE }}; bibtex ${{ env.FILE }}; pdflatex ${{ env.FILE }}; pdflatex ${{ env.FILE }};
       - name: LaTeX
         uses: xu-cheng/texlive-action@v2
-        #working-directory: ${{ env.DIR }}
         with:
           run: |
               cd ${{ env.DIR }}
@@ -32,7 +31,9 @@ jobs:
               pdflatex ${{ env.FILE }}
               pdflatex ${{ env.FILE }}
       - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+        run: |
+            mkdir -p github_artifacts
+            mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v2
         with:
@@ -49,7 +50,9 @@ jobs:
         with:
           path: github_artifacts
       - name: move
-        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
+        run: |
+            mkdir -p github_deploy
+            mv github_artifacts/*/* github_deploy
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
