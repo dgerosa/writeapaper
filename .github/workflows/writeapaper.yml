@@ -24,11 +24,12 @@ jobs:
       - name: LaTeX
         uses: xu-cheng/texlive-action@v2
         working-directory: ${{ env.DIR }}
-        run: |
-            pdflatex ${{ env.FILE }}
-            bibtex ${{ env.FILE }}
-            pdflatex ${{ env.FILE }}
-            pdflatex ${{ env.FILE }}
+        with:
+          run: |
+              pdflatex ${{ env.FILE }}
+              bibtex ${{ env.FILE }}
+              pdflatex ${{ env.FILE }}
+              pdflatex ${{ env.FILE }}
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
