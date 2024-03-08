@@ -72,7 +72,7 @@ jobs:
           path: github_artifacts
       - name: move
         run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
-        - name: Create Release
+      - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
