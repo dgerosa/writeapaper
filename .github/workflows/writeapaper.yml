@@ -28,6 +28,25 @@ jobs:
         with:
           name: ${{ env.FILE }}.pdf
           path: ./github_artifacts
+  # deploy:
+  #   # Edit here if compiling multiple papers
+  #   needs: [paper]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         path: github_artifacts
+  #     - name: move
+  #       run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
+  #     - name: deploy on orphan branch
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./github_deploy
+  #         publish_branch: build
+  #         force_orphan: true
   deploy:
     # Edit here if compiling multiple papers
     needs: [paper]
@@ -40,13 +59,29 @@ jobs:
           path: github_artifacts
       - name: move
         run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
-      - name: deploy on orphan branch
-        uses: peaceiris/actions-gh-pages@v3
+        - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./github_deploy
-          publish_branch: build
-          force_orphan: true
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./github_deploy
+          asset_name: github_deploy
+
+
+
+  
   clean:
     needs: [deploy]
     runs-on: ubuntu-latest
