@@ -11,11 +11,9 @@ A github action will compile the paper at every commit. The latest version is ma
 
 - Remove the placeholders in the `draft` directory.
 - Pick your journal from the `template` directory and copy its content into `draft`.
-- Copy the additional file `journal.sty` in `draft` (*)
 - Make sure GitHub actions have write permissions. Go to `Settings` / `Actions` / `General` / `Workflow permissions` and tick the box `Read and write permissions`.
-
 
 There are two variables in `.github/workflows/writeapaper.yml` that you might want to change, which set the directory (`DIR`) and the filename (`FILE`) of the tex file you want to compile.
 
 
-(*) Alternatively, you can copy the *content* of `journals.sty` inside your `.tex` file and remove the `journals` import package command.
+If you need some common journal abbreviations, you can copy `more/journals.sty` in your working directory.
