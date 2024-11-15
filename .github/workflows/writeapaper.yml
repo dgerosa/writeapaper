@@ -22,7 +22,7 @@ jobs:
       #  #run: latexmk -pdf -bibtex ${{ env.FILE }}
       #  run: pdflatex ${{ env.FILE }}; bibtex ${{ env.FILE }}; pdflatex ${{ env.FILE }}; pdflatex ${{ env.FILE }};
       - name: LaTeX
-        uses: xu-cheng/texlive-action@v4
+        uses: xu-cheng/texlive-action@v2
         with:
           run: |
               cd ${{ env.DIR }}
