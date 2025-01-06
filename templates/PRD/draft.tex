@@ -21,6 +21,9 @@
 \newcommand*{\balancecolsandclearpage}{\close@column@grid \cleardoublepage \twocolumngrid}
 \makeatother
 
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumi}{(\roman{enumi})}
+
 %\usepackage{draftwatermark}\SetWatermarkText{Draft} \SetWatermarkScale{4} \SetWatermarkAngle{30}
 
 \newcommand{\milan}{\affiliation{Dipartimento di Fisica ``G. Occhialini'', Universit\'a degli Studi di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy}}
