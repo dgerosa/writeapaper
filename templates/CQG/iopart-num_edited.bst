@@ -1,4 +1,5 @@
-% https://github.com/duetosymmetry/iopart-num.bst
+% Some edits by Leo Stein: https://github.com/duetosymmetry/iopart-num.bst
+% More edits by Davide Gerosa  https://github.com/dgerosa/writeapaper
 
 % iopart-num.bst -- BibTeX style for IOP journals (Harvard-like numeric style)
 % M. A. Caprio
@@ -830,6 +831,13 @@ FUNCTION {format.title}
   "title" bibinfo.check
 }
 FUNCTION {output.bibitem}
+{%
+  newline$
+  "\bibitem{" write$
+  cite$ write$
+  "}" write$
+  newline$
+}
 { newline$
   "\bibitem{" write$
   cite$ write$
