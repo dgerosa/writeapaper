@@ -5,6 +5,8 @@
 
 name: writeapaper
 on: [push]
+permissions:
+  contents: write
 jobs:
   paper:
     runs-on: ubuntu-latest
